@@ -27,8 +27,79 @@ csv文件具有如下特征：
 * 文件的扩展名一般是csv，也可以是其它扩展名，如txt。
 csv文件可以通过一般的文件访问形式来读写，即从文件中返回字符串或把字符串写到文件中。对文件中返回的字符串需要通过分隔符进行分隔，然后提取所需的字段值。
 
+### 1.1.2Excel文件
+Excel文件同csv文件类似，也是二维关系表形式，只能存储点数据，需要有两个字段分别记录点的x坐标和y坐标，记录x和y值的字段名是不固定的。
+Excel文件是二进制文件，直接访问比较复杂，通常是利用已有的API。
 
-
-
+###1.1.3GeoJSON文件
+GeoJSON是一种特殊类型的JSON文件，要了解GeoJSON文件，先要了解一下JSON文件。
+JSON（JavaScript Object Notation）即 JavaScript对象标记，JSON格式的数据是以特定的标记进行表示和组织。
+JSON数据是目前网络数据交互中采用的一种数据。
+JSON文件也是文本文件，扩展名为json。
+JSON数据定义了如下的数据类型：
+* 数字，用整数或浮点数表示，如123。
+* 字符串，用单引号或双引号表示，如'123'。
+* 逻辑值，用True或False表示。
+* 数组，用方括号表示（类似Python中的列表）。
+* 对象，用花括号表示（类似Python中的字典）。
+* 空值，用null表示。
+JSON数据的核心是对象， JSON文件的读写是围绕对象来进行。
+一个对象中可以有多个成员，成员之间用逗号分隔，每个成员都是“名:值”对的形式，名必须是字符串并且是唯一的，值可以是数字、字符串、逻辑值、数组、对象或空值。
+对象中成员之间的关系可以是组成关系，也可以是集合关系。
+组成关系中的成员可以认为是一个实例的不同信息，如某个城市有名称、经度、纬度、人口等信息。
+```
+{"name":"Beijing","lon": 116.37, "lat": 39.92, "pop": 2170}
+```
+集合关系中的成员可以认为是多个实例，如多个城市的人口信息。
+```
+{"Beijing":2170, "Shanghai":2418, "Guangzhou":1449}
+```
+JSON数据是利用层次结构来组织数据，即成员的值也可以是对象。
+```
+{'Beijing': {'coord': {'lat': 39.92, 'lon': 116.37}, 'pop': 2170},
+ 'Guangzhou': {'coord': {'lat': 23.13, 'lon': 113.25}, 'pop': 1449},
+ 'Shanghai': {'coord': {'lat': 31.26, 'lon': 121.53}, 'pop': 2418}}
+```
+如果已了解一个JSON数据的结构，就可以根据某个成员的名返回相应的值，如[“Shanghai”]是返回成员名为“Shanghai”的值，[“Shanghai”][“coord”]则从前一个返回值返回成员名为“coord”的值。
+GeoJSON定义了用JSON表示空间数据的统一规范，GeoJSON文件的扩展名也是json。
+GeoJSON中的对象必须要有一个名为“type”的成员，值必须是以下中的一个：
+* “Point”
+* “MultiPoint”
+* “LineString”
+* “MultiLineString”
+* “Polygon”
+* “MultiPolygon”
+* “GeometryCollection”
+* “Feature”
+* “FeatureCollection”
+如值是“Point”、“MultiPoint”、“LineString”、“MultiLineString”、“Polygon”或“MultiPolygon”，则该对象表示不同类型的几何对象。
+几何对象应包括名为“coordinates”的成员，值是构成几何对象的点坐标数组，每个点坐标是x和y值构成的数组。
+```
+{"type": "Point", "coordinates": [102.0, 0.5]}
+{ "type": "LineString",
+        "coordinates": [
+          [102.0, 0.0], [103.0, 1.0], [104.0, 0.0], [105.0, 1.0]
+          ]
+        }
+{"type": "Polygon",
+        "coordinates": [
+          [ [100.0, 0.0], [101.0, 0.0], [101.0, 1.0],
+            [100.0, 1.0], [100.0, 0.0] ]
+          ]
+       }
+```
+如“type”的值是“Feature”，则表示是一个要素对象，要素对象应包括名为“geometry”和“properties”成员，前者的值是几何对象，后者的值是属性集合。
+如“type”的值是”FeatureCollection“，则表示该对象是要素集合，要素集合对象应包括名为”features“的成员，值是要素对象数组。
+要素集合中的对象可以是不同几何类型的对象，即一个GeoJSON文件可以同时包含点、线、多边形要素。
+```
+{ "type": "FeatureCollection",
+  "features": [
+    { "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [102.0, 0.5]},
+      "properties": {"prop0": "value0"}
+      },
+      ......
+      }
+```
 
 ## 1.2 GIS服务
