@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>显示地图</title>
+        <style>
+            img{
+                width: 300px;
+                height: 300px;}
+        </style>
+    </head>
+    <body>
+        <button onclick="shanghai_map()">上海地图</button>
+        <button onclick="beijing_map()">北京地图</button>
+        <br>
+        <img id='img'>
+        <script>
+            function shanghai_map(){
+                url = 'https://jpwu19860184.github.io/china/shanghai_map.png';
+                document.getElementById("img").src=url;}
+            function beijing_map(){
+                url = 'https://jpwu19860184.github.io/china/beijing_map.png';
+                document.getElementById("img").src=url;}
+        </script>
+    </body>
+</html>
