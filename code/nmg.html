@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_db539717a16f4d9cb433ed56871435f4 {
+                    position: relative;
+                    width: 350.0px;
+                    height: 800.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
+</head>
+<body>    
+            <button onclick="getLocation()">定位</button>
+            <div class="folium-map" id="map_db539717a16f4d9cb433ed56871435f4" ></div>
+
+        
+</body>
+<script>    
+    
+            var map_db539717a16f4d9cb433ed56871435f4 = L.map(
+                "map_db539717a16f4d9cb433ed56871435f4",
+                {
+                    center: [48.556358706166414, 121.99983160404892],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0847fee986454466af68d8f37964174c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "openstreetmap", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_db539717a16f4d9cb433ed56871435f4);
+        
+    
+            var tile_layer_e6e654cf19804d1b9be41b04ec1eca00 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "ArcGIS online\u5168\u7403\u5f71\u50cf\u6570\u636e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_db539717a16f4d9cb433ed56871435f4);
+        
+    
+            var feature_group_51074a51216b49b0b4f539c184a66e56 = L.featureGroup(
+                {}
+            ).addTo(map_db539717a16f4d9cb433ed56871435f4);
+        
+    
+            var circle_marker_3c36f6eebc454b2b98ed212688e87546 = L.circleMarker(
+                [49.2078910023, 119.764550423],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_51074a51216b49b0b4f539c184a66e56);
+        
+    
+        var popup_121b0bf989594f168239228a3ff08ef4 = L.popup({"maxWidth": 200});
+
+        
+            var html_1dbd6c9e10ef4c4aa5106cdadd318b53 = $(`<div id="html_1dbd6c9e10ef4c4aa5106cdadd318b53" style="width: 100.0%; height: 100.0%;"><h4>成吉思汗广场</h4>                是至今为止内蒙古自治区境内最大的广场（与锡林广场并列），也是呼伦贝尔市海拉尔区的标志性建筑之一。             </div>`)[0];
+            popup_121b0bf989594f168239228a3ff08ef4.setContent(html_1dbd6c9e10ef4c4aa5106cdadd318b53);
+        
+
+        circle_marker_3c36f6eebc454b2b98ed212688e87546.bindPopup(popup_121b0bf989594f168239228a3ff08ef4)
+        ;
+
+        
+    
+    
+            var circle_marker_e930af1dc87143e0bf24b5b04ff132c3 = L.circleMarker(
+                [49.2115706267, 119.817879334],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_51074a51216b49b0b4f539c184a66e56);
+        
+    
+        var popup_c0571edab7d74453a3c386dc8462a540 = L.popup({"maxWidth": 200});
+
+        
+            var html_93c35eb5896540448183902242a603b4 = $(`<div id="html_93c35eb5896540448183902242a603b4" style="width: 100.0%; height: 100.0%;"><h4>海拉尔机场</h4>                即呼伦贝尔东山国际机场，距海拉尔区城区和鄂温克族自治旗县城3千米。             </div>`)[0];
+            popup_c0571edab7d74453a3c386dc8462a540.setContent(html_93c35eb5896540448183902242a603b4);
+        
+
+        circle_marker_e930af1dc87143e0bf24b5b04ff132c3.bindPopup(popup_c0571edab7d74453a3c386dc8462a540)
+        ;
+
+        
+    
+    
+            var circle_marker_4ba10db58f424afca661d131cd98fdb8 = L.circleMarker(
+                [50.2417860019, 120.142892121],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_51074a51216b49b0b4f539c184a66e56);
+        
+    
+        var popup_40fa38f3973c48d6adb695cd055ca4e8 = L.popup({"maxWidth": 200});
+
+        
+            var html_1c3390ba10ee4001bea280f3eca4abb4 = $(`<div id="html_1c3390ba10ee4001bea280f3eca4abb4" style="width: 100.0%; height: 100.0%;"><h4>额尔古纳湿地</h4>                2011年晋升为国家AAAA级旅游景区，被评为“中国特色旅游最佳湿地”。             </div>`)[0];
+            popup_40fa38f3973c48d6adb695cd055ca4e8.setContent(html_1c3390ba10ee4001bea280f3eca4abb4);
+        
+
+        circle_marker_4ba10db58f424afca661d131cd98fdb8.bindPopup(popup_40fa38f3973c48d6adb695cd055ca4e8)
+        ;
+
+        
+    
+    
+            var circle_marker_c0734f18b12e41aaa7cb651b54afd53d = L.circleMarker(
+                [50.9926811368, 121.047640263],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_51074a51216b49b0b4f539c184a66e56);
+        
+    
+        var popup_4787c27ba2e54885aa4b72fd5a0385cb = L.popup({"maxWidth": 200});
+
+        
+            var html_37ad5d35bd36451f8a618ff53c627dce = $(`<div id="html_37ad5d35bd36451f8a618ff53c627dce" style="width: 100.0%; height: 100.0%;"><h4>得耳布尔镇</h4>                得耳布尔镇地处根河市西部，大兴安岭山脉北段西坡。             </div>`)[0];
+            popup_4787c27ba2e54885aa4b72fd5a0385cb.setContent(html_37ad5d35bd36451f8a618ff53c627dce);
+        
+
+        circle_marker_c0734f18b12e41aaa7cb651b54afd53d.bindPopup(popup_4787c27ba2e54885aa4b72fd5a0385cb)
+        ;
+
+        
+    
+    
+            var circle_marker_9047564300df4bc2ad5bb3abf1056b09 = L.circleMarker(
+                [51.2555281346, 120.771002405],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_51074a51216b49b0b4f539c184a66e56);
+        
+    
+        var popup_24aa2dc1963f40e992e80e26259dc11b = L.popup({"maxWidth": 200});
+
+        
+            var html_3e52fb2461c842c7a857a1d0d25384d1 = $(`<div id="html_3e52fb2461c842c7a857a1d0d25384d1" style="width: 100.0%; height: 100.0%;"><h4>莫尔道嘎镇</h4>                “莫尔道嘎”系鄂温克语，“有桦树林子的地方”之意。莫尔道嘎国家森林公园是国家AAAA级旅游景区。             </div>`)[0];
+            popup_24aa2dc1963f40e992e80e26259dc11b.setContent(html_3e52fb2461c842c7a857a1d0d25384d1);
+        
+
+        circle_marker_9047564300df4bc2ad5bb3abf1056b09.bindPopup(popup_24aa2dc1963f40e992e80e26259dc11b)
+        ;
+
+        
+    
+    
+            var circle_marker_ea12ebe04ffb4c5b870ffe07ba8bccb1 = L.circleMarker(
+                [51.3370659381, 119.900944937],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_51074a51216b49b0b4f539c184a66e56);
+        
+    
+        var popup_143a183e55c54bdcb139628a6249727e = L.popup({"maxWidth": 200});
+
+        
+            var html_847f652a11db4c879a0edab291d719a5 = $(`<div id="html_847f652a11db4c879a0edab291d719a5" style="width: 100.0%; height: 100.0%;"><h4>蒙兀室韦苏木</h4>                地处额尔古纳市西北部，西与俄罗斯涅尔琴斯基扎沃德区的奥洛契隔河为界。“蒙兀”是“蒙古”见诸史端的最早称谓，“室韦”系蒙古语，意为“森林”。             </div>`)[0];
+            popup_143a183e55c54bdcb139628a6249727e.setContent(html_847f652a11db4c879a0edab291d719a5);
+        
+
+        circle_marker_ea12ebe04ffb4c5b870ffe07ba8bccb1.bindPopup(popup_143a183e55c54bdcb139628a6249727e)
+        ;
+
+        
+    
+    
+            var circle_marker_0486cb89ba7045eaa718aeceea07c45a = L.circleMarker(
+                [49.4951848558, 119.690358894],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_51074a51216b49b0b4f539c184a66e56);
+        
+    
+        var popup_6258abba089c42f39e3df6da16c59b7b = L.popup({"maxWidth": 200});
+
+        
+            var html_447b9ea89caa469cb7394e85d489ee7b = $(`<div id="html_447b9ea89caa469cb7394e85d489ee7b" style="width: 100.0%; height: 100.0%;"><h4>莫尔格勒河</h4>                发源于呼伦贝尔市陈巴尔虎旗境内，大兴安岭西麓，号称“天下第一曲水”。河长319公里，流域面积4987平方公里，由东北向西南，流经著名的呼伦贝尔大草原，注入呼和诺尔湖。             </div>`)[0];
+            popup_6258abba089c42f39e3df6da16c59b7b.setContent(html_447b9ea89caa469cb7394e85d489ee7b);
+        
+
+        circle_marker_0486cb89ba7045eaa718aeceea07c45a.bindPopup(popup_6258abba089c42f39e3df6da16c59b7b)
+        ;
+
+        
+    
+    
+            var circle_marker_bb1f4baf349d4de4b2b533045fa4fa53 = L.circleMarker(
+                [50.7785607041, 121.468692432],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_51074a51216b49b0b4f539c184a66e56);
+        
+    
+        var popup_f52c1c725df34722ae478ef0a946f880 = L.popup({"maxWidth": 200});
+
+        
+            var html_1ba16698d10145fdbcf79b17f7a44e13 = $(`<div id="html_1ba16698d10145fdbcf79b17f7a44e13" style="width: 100.0%; height: 100.0%;"><h4>敖鲁古雅</h4>                敖鲁古雅是鄂温克族居住的部落，位于呼伦贝尔市根河市最北部的敖鲁古雅河畔，根河市西郊，是鄂温克族最远也是最神秘的一个支系居住的地方。             </div>`)[0];
+            popup_f52c1c725df34722ae478ef0a946f880.setContent(html_1ba16698d10145fdbcf79b17f7a44e13);
+        
+
+        circle_marker_bb1f4baf349d4de4b2b533045fa4fa53.bindPopup(popup_f52c1c725df34722ae478ef0a946f880)
+        ;
+
+        
+    
+    
+            var circle_marker_69d5f155867e4258900080831d26d775 = L.circleMarker(
+                [50.8196569115, 119.908483305],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_51074a51216b49b0b4f539c184a66e56);
+        
+    
+        var popup_5ac59d5fac5c441283d9eb3351577f11 = L.popup({"maxWidth": 200});
+
+        
+            var html_12d919a2b54e45998d05f404b658a23d = $(`<div id="html_12d919a2b54e45998d05f404b658a23d" style="width: 100.0%; height: 100.0%;"><h4>恩和俄罗斯民族乡</h4>                “恩和”蒙古语，“太平”之意。             </div>`)[0];
+            popup_5ac59d5fac5c441283d9eb3351577f11.setContent(html_12d919a2b54e45998d05f404b658a23d);
+        
+
+        circle_marker_69d5f155867e4258900080831d26d775.bindPopup(popup_5ac59d5fac5c441283d9eb3351577f11)
+        ;
+
+        
+    
+    
+            var circle_marker_31449133d96749da8964c4835246c533 = L.circleMarker(
+                [50.2136713175, 119.57303027],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_51074a51216b49b0b4f539c184a66e56);
+        
+    
+        var popup_faab6509e0734d1599be2aa0a0a3d186 = L.popup({"maxWidth": 200});
+
+        
+            var html_a8784473141a40fb965630a32be62801 = $(`<div id="html_a8784473141a40fb965630a32be62801" style="width: 100.0%; height: 100.0%;"><h4>黑山头镇</h4>                黑山头古城位于黑山头镇西北10千米处，古城分内城和外城。蒙古汗国时期，额尔古纳河流域为成吉思汗的弟弟哈撒尔的封地。             </div>`)[0];
+            popup_faab6509e0734d1599be2aa0a0a3d186.setContent(html_a8784473141a40fb965630a32be62801);
+        
+
+        circle_marker_31449133d96749da8964c4835246c533.bindPopup(popup_faab6509e0734d1599be2aa0a0a3d186)
+        ;
+
+        
+    
+    
+            var circle_marker_9e11683a49034bc6aca0a0e56f2b8cec = L.circleMarker(
+                [49.6122880795, 117.390695852],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_51074a51216b49b0b4f539c184a66e56);
+        
+    
+        var popup_9511a1c1b9f6484fab6302a36eaeeb25 = L.popup({"maxWidth": 200});
+
+        
+            var html_c04fdf61f68b499d8aca5e0a726ffd01 = $(`<div id="html_c04fdf61f68b499d8aca5e0a726ffd01" style="width: 100.0%; height: 100.0%;"><h4>满洲里套娃景区</h4>                满洲里套娃景区占地1300亩，是以满洲里和俄罗斯相结合的历史、文化、建筑、民俗风情为理念，集吃、住、行、游、购、娱为一体的大型俄罗斯特色风情园。             </div>`)[0];
+            popup_9511a1c1b9f6484fab6302a36eaeeb25.setContent(html_c04fdf61f68b499d8aca5e0a726ffd01);
+        
+
+        circle_marker_9e11683a49034bc6aca0a0e56f2b8cec.bindPopup(popup_9511a1c1b9f6484fab6302a36eaeeb25)
+        ;
+
+        
+    
+    
+            var circle_marker_33c978b0ee2c4cb9b1317edb6883d321 = L.circleMarker(
+                [48.9170702485, 117.401389253],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_51074a51216b49b0b4f539c184a66e56);
+        
+    
+        var popup_6968709d1e7d46e7a1e607b9fe8f337b = L.popup({"maxWidth": 200});
+
+        
+            var html_324b3c2ea3544cba8315e3c8fb41fb14 = $(`<div id="html_324b3c2ea3544cba8315e3c8fb41fb14" style="width: 100.0%; height: 100.0%;"><h4>呼伦湖</h4>                呼伦湖又名呼伦池、达赉湖、达赉诺尔，与贝尔湖互为姊妹湖。蒙古语意为“海一样的湖”，是中国第五大湖。             </div>`)[0];
+            popup_6968709d1e7d46e7a1e607b9fe8f337b.setContent(html_324b3c2ea3544cba8315e3c8fb41fb14);
+        
+
+        circle_marker_33c978b0ee2c4cb9b1317edb6883d321.bindPopup(popup_6968709d1e7d46e7a1e607b9fe8f337b)
+        ;
+
+        
+    
+    
+            var circle_marker_231603cbcff4460f92e2337c194ba396 = L.circleMarker(
+                [45.7756514743, 126.608967356],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_51074a51216b49b0b4f539c184a66e56);
+        
+    
+        var popup_971f2ab771874e5e970e2086fbd3c2c2 = L.popup({"maxWidth": 200});
+
+        
+            var html_ebb750a9b49e46caa79ebfe7740183e8 = $(`<div id="html_ebb750a9b49e46caa79ebfe7740183e8" style="width: 100.0%; height: 100.0%;"><h4>哈布斯堡酒店</h4>                哈尔滨哈布斯堡酒店位于道里区友谊路与通江街交口，坐落在美丽的松花江畔，地处哈尔滨市繁华的防洪纪念塔与中央大街核心商业区。             </div>`)[0];
+            popup_971f2ab771874e5e970e2086fbd3c2c2.setContent(html_ebb750a9b49e46caa79ebfe7740183e8);
+        
+
+        circle_marker_231603cbcff4460f92e2337c194ba396.bindPopup(popup_971f2ab771874e5e970e2086fbd3c2c2)
+        ;
+
+        
+    
+    
+            var feature_group_c3132e976f644d30b2bcf352bc5d007f = L.featureGroup(
+                {}
+            ).addTo(map_db539717a16f4d9cb433ed56871435f4);
+        
+    
+            var poly_line_8b07a1f76886461f854ca214b5ba3c71 = L.polyline(
+                [[49.211571, 119.817879], [49.207891, 119.76455], [49.495185, 119.690359], [50.241786, 120.142892], [50.778561, 121.468692], [50.992681, 121.04764], [51.255528, 120.771002], [51.337066, 119.900945], [50.819657, 119.908483], [50.213671, 119.57303], [49.612288, 117.390696], [48.91707, 117.401389], [45.775651, 126.608967]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c3132e976f644d30b2bcf352bc5d007f);
+        
+    
+            var layer_control_40cf08edc60f4e3d9f8aaeecfb419a4a = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_0847fee986454466af68d8f37964174c,
+                    "ArcGIS online\u5168\u7403\u5f71\u50cf\u6570\u636e" : tile_layer_e6e654cf19804d1b9be41b04ec1eca00,
+                },
+                overlays :  {
+                    "\u65c5\u6e38\u70b9" : feature_group_51074a51216b49b0b4f539c184a66e56,
+                    "\u65c5\u6e38\u8def\u7ebf" : feature_group_c3132e976f644d30b2bcf352bc5d007f,
+                },
+            };
+            L.control.layers(
+                layer_control_40cf08edc60f4e3d9f8aaeecfb419a4a.base_layers,
+                layer_control_40cf08edc60f4e3d9f8aaeecfb419a4a.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_db539717a16f4d9cb433ed56871435f4);
+            tile_layer_e6e654cf19804d1b9be41b04ec1eca00.remove();
+        
+    
+            var locate_control_4ba6aa9495e5430a8acc953bc5ddc80f = L.control.locate(
+                {}
+            ).addTo(map_db539717a16f4d9cb433ed56871435f4);
+
+    function getLocation(){
+    if (navigator.geolocation)
+    {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    }
+    else
+    {
+        alert("你的浏览器不支持地理定位");
+    }}
+    
+    function showPosition(position)
+    {
+        x = position.coords.longitude; 
+        y = position.coords.latitude;
+        marker = L.marker([y, x]);
+        marker.bindPopup("我在这里");
+        marker.addTo(map_db539717a16f4d9cb433ed56871435f4);
+        map_db539717a16f4d9cb433ed56871435f4.setView([y,x], 16)  
+    }
+
+        
+</script>
