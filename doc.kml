@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+  <Document>
+    <Placemark id="172455933544737543407">
+      <visibility>1</visibility>
+      <name>和睦桥水文站</name>
+      <description><![CDATA[<html><body style="margin: 0px 16px 0px 16px"><p style="margin: 0px 0px 4px 0px;font: 14px 'AvenirNext-Regular';line-height: 22px;color: #333333;word-wrap: break-word;word-break: break-all;">和睦桥水文站</p><img style="margin-bottom: 8px" width ="100%" height ="auto" src="files/5ec1588f-92d4-4482-aed8-bb1bc0d2ed10.jpeg"/></body></html>]]></description>
+      <Style>
+        <IconStyle>
+          <color>ffffffff</color>
+          <scale>1</scale>
+          <Icon>
+            <href>files/2131624051_#008ddf_3.png</href>
+          </Icon>
+          <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+        </IconStyle>
+      </Style>
+      <Snippet maxLines="0"><![CDATA[{"colorString":"#008ddf","iconName":"ic_mark2_icon","typeString":"drawing"}]]></Snippet>
+      
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>119.8005539573521,30.58308095277115,167.6818383270875</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="172456398760533899668">
+      <visibility>1</visibility>
+      <name>H1观察场</name>
+      <description><![CDATA[<html><body style="margin: 0px 16px 0px 16px"><p style="margin: 0px 0px 4px 0px;font: 14px 'AvenirNext-Regular';line-height: 22px;color: #333333;word-wrap: break-word;word-break: break-all;"></p><img style="margin-bottom: 8px" width ="100%" height ="auto" src="files/c8d4045b-f620-493d-85db-68b0895039fd.jpeg"/></body></html>]]></description>
+      <Style>
+        <IconStyle>
+          <color>ffffffff</color>
+          <scale>1</scale>
+          <Icon>
+            <href>files/2131624051_#008ddf_6.png</href>
+          </Icon>
+          <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+        </IconStyle>
+      </Style>
+      <Snippet maxLines="0"><![CDATA[{"colorString":"#008ddf","iconName":"ic_mark2_icon","typeString":"drawing"}]]></Snippet>
+      
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>119.7960073545731,30.57044400953979,302.6217948244885</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark id="172456831439913763979">
+      <visibility>1</visibility>
+      <name>姜湾水文站</name>
+      <description><![CDATA[<html><body style="margin: 0px 16px 0px 16px"><p style="margin: 0px 0px 4px 0px;font: 14px 'AvenirNext-Regular';line-height: 22px;color: #333333;word-wrap: break-word;word-break: break-all;"></p><img style="margin-bottom: 8px" width ="100%" height ="auto" src="files/74df5afe-1994-42e0-9226-be458af2b01b.jpeg"/></body></html>]]></description>
+      <Style>
+        <IconStyle>
+          <color>ffffffff</color>
+          <scale>1</scale>
+          <Icon>
+            <href>files/2131624051_#008ddf_7.png</href>
+          </Icon>
+          <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+        </IconStyle>
+      </Style>
+      <Snippet maxLines="0"><![CDATA[{"colorString":"#008ddf","iconName":"ic_mark2_icon","typeString":"drawing"}]]></Snippet>
+      
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>119.8360988990125,30.56819105206027,82.19897738564759</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
